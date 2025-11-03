@@ -1,0 +1,25 @@
+{
+  "name": "contact-form-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)",
+  "homepage": "https://github.com/yiyingko/contact-form-pro#readme",
+  "bugs": {
+    "url": "https://github.com/yiyingko/contact-form-pro/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyingko/contact-form-pro.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
