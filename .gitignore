@@ -14,3 +14,22 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS / Editor
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Logs and coverage
+npm-debug.log*
+yarn-debug.log*
+coverage/
