@@ -54,11 +54,42 @@ npm run fix      # auto-fix style issues
 git clone https://github.com/<yourname>/contact-form-pro.git
 cd contact-form-pro
 npm install
-npm run lint
 # open docs/index.html in your browser
 ```
 
-Deployment:
+### 🧹 Code Quality & Formatting
+
+This project uses **ESLint** and **Prettier** to maintain clean, consistent code.
+
+#### 🔧 Setup
+
+After cloning the repo, install dependencies:
+
+```bash
+npm install
+```
+
+This will automatically set up the Git pre-commit hook (via the `prepare` script).
+
+#### 🧩 Available Commands
+
+| Command               | Description                                                                     |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `npm run lint`        | Check all files for linting issues                                              |
+| `npm run lint:fix`    | Automatically fix simple lint errors                                            |
+| `npm run format`      | Format all files with Prettier                                                  |
+| `npm run setup-hooks` | Re-enable the Git pre-commit hook manually (after cloning or resetting `.git/`) |
+
+#### 🪶 Pre-commit Hook
+
+Every time you commit, the following runs automatically:
+
+1. **ESLint** – fixes common code issues (`npm run lint:fix`)
+2. **Prettier** – formats code consistently (`npm run format`)
+
+If either step fails, the commit is paused until issues are fixed — keeping the main branch clean and professional ✨
+
+## Deployment:
 
 - Static site hosted via **GitHub Pages**
 - Settings → Pages → Deploy from `/docs` folder
