@@ -1,1 +1,1 @@
-let unused = 42;
+
