@@ -18,41 +18,81 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form>
-      <h1>Contact Us</h1>
-      <div>
-        <label for="fname">First name *</label>
-        <input type="text" id="fname" name="fname" />
-        <label for="lname">Last name *</label>
-        <input type="text" id="lname" name="lname" />
-        <span>This field is required</span>
-        <span>This field is required</span>
+    <form class="form">
+      <div class="form_wrapper">
+        <h1>Contact Us</h1>
+        <div class="form__field form__field__name">
+          <div class="form__field__name__wraper">
+            <label for="fname">First name *</label><br />
+            <input
+              class="form__input__name"
+              type="text"
+              id="fname"
+              name="fname"
+            />
+            <span class="form__error">This field is required</span>
+          </div>
+          <div class="form__field__name__wraper">
+            <label for="lname">Last name *</label><br />
+            <input class="form__input__name" id="lname" name="lname" />
+            <span class="form__error">This field is required</span>
+          </div>
+        </div>
+        <div class="form__field form__field_email">
+          <label for="email">Email Address *</label><br />
+          <input
+            class="form__input__email"
+            type="email"
+            id="email"
+            name="email"
+          /><br />
+          <span class="form__error">Please enter a valid email address</span>
+        </div>
+        <div class="form__field">
+          <label for="query">Query Type *</label><br />
+          <div class="form__field__query">
+            <div class="form__field__query__wraper">
+              <input type="radio" id="general" name="general" value="general" />
+              <label for="general">General Enquiry</label>
+            </div>
+            <div class="form__field__query__wraper">
+              <input type="radio" id="support" name="support" value="support" />
+              <label for="support">Support Request</label><br />
+            </div>
+          </div>
+          <span class="form__error">Please select a query type</span>
+        </div>
+        <div class="form__field">
+          <label for="message">Message *</label><br />
+          <input
+            class="form__field__message__input"
+            id="message"
+            name="message"
+          />
+          <span class="form__error">This field is required</span>
+        </div>
+        <div class="form__field form__field__contact">
+          <input
+            class="form__input__contact"
+            type="checkbox"
+            id="contact"
+            name="contact"
+          />
+          <label for="contact">I consent to being contacted by the team</label>
+          <div class="form__error">
+            To submit this form, please consent to being contacted
+          </div>
+        </div>
+        <input
+          class="form__field form__field__submit"
+          type="submit"
+          id="submit"
+          name="submit"
+          value="submit"
+        />
       </div>
-      <div>
-        <label for="email">Email Address *</label><br />
-        <input type="email" id="email" name="email" /><br />
-        <span>Please enter a valid email address</span>
-      </div>
-      <div>
-        <label for="query">Query Type *</label><br />
-        <input type="radio" id="general" name="general" value="general" />
-        <label for="general">General Enquiry</label>
-        <input type="radio" id="support" name="support" value="support" />
-        <label for="support">Support Request</label><br />
-        <span>Please select a query type</span>
-      </div>
-      <div>
-        <label for="message">Message</label><br />
-        <input type="text" id="message" name="message" />
-        <span>This field is required</span>
-      </div>
-      <div>
-        <div>I consent to being contacted by the team</div>
-        <span> To submit this form, please consent to being contacted</span>
-      </div>
-      <input type="submit" id="submit" name="submit" value="submit" />
     </form>
-    <div>
+    <div class="form--success">
       Message Sent!
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
