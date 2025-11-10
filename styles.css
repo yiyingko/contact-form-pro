@@ -49,11 +49,10 @@ h1 {
 }
 
 .label::after {
-  content: "*";
+  content: '*';
   color: var(--Green-600-medium);
   font-size: small;
 }
-
 
 .form__field {
   width: 100%;
@@ -109,6 +108,15 @@ input:focus {
   border: 1px solid var(--Grey-500-medium);
   border-radius: 5px;
   padding-left: 20px;
+  caret-color: transparent;
+}
+
+.form__field__query__wraper:hover {
+  cursor: pointer;
+}
+
+.form__field__query__wraper:focus-within {
+  background-color: var(--Green-200-lighter);
 }
 
 .form__field__query input {
