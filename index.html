@@ -23,7 +23,7 @@
         <h1>Contact Us</h1>
         <div class="form__field form__field__name">
           <div class="form__field__name__wraper">
-            <label for="fname">First name *</label><br />
+            <label class="label" for="fname">First name </label><br />
             <input
               class="form__input__name"
               type="text"
@@ -33,13 +33,13 @@
             <span class="form__error">This field is required</span>
           </div>
           <div class="form__field__name__wraper">
-            <label for="lname">Last name *</label><br />
+            <label class="label" for="lname">Last name </label><br />
             <input class="form__input__name" id="lname" name="lname" />
             <span class="form__error">This field is required</span>
           </div>
         </div>
         <div class="form__field form__field_email">
-          <label for="email">Email Address *</label><br />
+          <label class="label" for="email">Email Address </label><br />
           <input
             class="form__input__email"
             type="email"
@@ -49,7 +49,7 @@
           <span class="form__error">Please enter a valid email address</span>
         </div>
         <div class="form__field">
-          <label for="query">Query Type *</label><br />
+          <label class="label" for="query">Query Type </label><br />
           <div class="form__field__query">
             <div class="form__field__query__wraper">
               <input type="radio" id="general" name="general" value="general" />
@@ -63,7 +63,7 @@
           <span class="form__error">Please select a query type</span>
         </div>
         <div class="form__field">
-          <label for="message">Message *</label><br />
+          <label class="label" for="message">Message </label><br />
           <input
             class="form__field__message__input"
             id="message"
@@ -78,7 +78,9 @@
             id="contact"
             name="contact"
           />
-          <label for="contact">I consent to being contacted by the team</label>
+          <label class="label" for="contact"
+            >I consent to being contacted by the team</label
+          >
           <div class="form__error">
             To submit this form, please consent to being contacted
           </div>
