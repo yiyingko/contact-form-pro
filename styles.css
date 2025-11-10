@@ -1,149 +1,172 @@
 :root {
-    /*Primary*/
-    --Green-200-lighter: hsl(148, 38%, 91%);
-    --Green-600-medium: hsl(169, 82%, 27%);
-    --Red: hsl(0, 66%, 54%);
-    /*Neutral*/
-    --White: hsl(0, 0%, 100%);
-    --Grey-500-medium: hsl(186, 15%, 59%);
-    --Grey-900-darker: hsl(187, 24%, 22%);
+  /*Primary*/
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Karla', sans-serif;
-    display: grid;
-    place-items: center;
-    font-size: 16px;
-    background-color: var(--Green-200-lighter);
+  font-family: 'Karla', sans-serif;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  background-color: var(--Green-200-lighter);
 }
 
 /* .form, .form__field, .form__label, .form__input, .form__error, modifiers like .form__input--invalid*/
 
 .form {
-    width: 630px;
-    height: 650px;
-    margin-top: 8%;
-    border-radius: 1rem;
-    display: grid;
-    place-items: center;
-    background-color: var(--White);
+  width: 630px;
+  height: 650px;
+  margin-top: 8%;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--White);
 }
 
-.form_wrapper {
-    width: 90%;
-    height: 90%;
-
+.form__wrapper {
+  width: 90%;
+  height: 90%;
 }
 
 h1 {
-    font-size: 26px;
-    font-weight: 600;
-    color: var(--Grey-900-darker);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--Grey-900-darker);
 }
 
-
 .form__field {
-    width: 100%;
-    height: max-content;
-    margin-top: 2%;
+  width: 100%;
+  height: max-content;
+  margin-top: 2%;
 }
 
 input {
-    border-radius: 5px;
-    border: 1px solid;
-    color: var(--Grey-500-medium);
+  border-radius: 5px;
+  border: 1px solid;
+  color: var(--Grey-500-medium);
 }
 
 .form__field__name {
-    height: 13%;
-    display: flex;
-    justify-content: space-between;
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__field__name__wraper {
-    width: 49%;
+  width: 49%;
 }
 
 .form__input__name {
-    width: 100%;
-    height: 55%;
-    margin-top: 3%;
+  width: 100%;
+  height: 55%;
+  margin-top: 3%;
 }
 
-
 .form__input__email {
-    width: 100%;
-    height: 41px;
-    margin-top: 2%;
+  width: 100%;
+  height: 41px;
+  margin-top: 2%;
 }
 
 .form__field__query {
-    height: 58px;
-    display: flex;
-    justify-content: space-between;
-
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form__field__query__wraper {
-    width: 49%;
-    margin-top: 2%;
-    border: 1px solid var(--Grey-500-medium);
-    border-radius: 5px;
-    padding-left: 20px;
+  width: 49%;
+  margin-top: 2%;
+  border: 1px solid var(--Grey-500-medium);
+  border-radius: 5px;
+  padding-left: 20px;
 }
 
 .form__field__query input {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .form__field__message__input {
-    width: 100%;
-    height: 100px;
-    margin-top: 2%;
+  width: 100%;
+  height: 100px;
+  margin-top: 2%;
 }
 
 .form__input__contact {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .form__field__contact label {
-    margin-left: 2%;
-    font-size: 14px;
+  margin-left: 2%;
+  font-size: 14px;
 }
 
 .form__field__submit {
-    height: 46px;
-    background-color: var(--Green-600-medium);
-    color: var(--White);
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
+  height: 46px;
+  background-color: var(--Green-600-medium);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .form__error {
-    color: var(--Red);
-    font-size: 14px;
-    padding-bottom: 10px;
-    display: none;
+  color: var(--Red);
+  font-size: 14px;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.form--success {
+  width: 19.5%;
+  height: 5.2rem;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  padding: 1%;
+  color: var(--White);
+  background-color: var(--Grey-900-darker);
+  opacity: 0.8;
+  position: absolute;
+  inset-inline-start: 40%;
+  inset-block-start: 7%;
+  transform: rotateY(90deg);
+}
+
+.form--sucess--msg {
+  display: flex;
+  margin-bottom: 3%
+}
+
+
+
+h2 {
+  font-size: 14px;
+  margin-left: 2%;
 }
 
 /*footer*/
 .attribution {
-    font-size: 12px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
