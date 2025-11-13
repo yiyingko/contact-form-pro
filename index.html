@@ -29,12 +29,23 @@
               type="text"
               id="fname"
               name="fname"
+              maxlength="25"
+              pattern="[A-Za-z0-9\s'-]{1,35}"
+              title="Use up to 35 letters/numbers, spaces, - and ' only."
+              required
             />
             <span class="form__error">This field is required</span>
           </div>
           <div class="form__field__name__wraper">
             <label class="label" for="lname">Last name </label><br />
-            <input class="form__input__name" id="lname" name="lname" />
+            <input
+              class="form__input__name"
+              type="text"
+              id="lname"
+              name="lname"
+              maxlength="25"
+              required
+            />
             <span class="form__error">This field is required</span>
           </div>
         </div>
@@ -45,6 +56,8 @@
             type="email"
             id="email"
             name="email"
+            maxlength="50"
+            required
           /><br />
           <span class="form__error">Please enter a valid email address</span>
         </div>
@@ -57,6 +70,7 @@
                 id="general"
                 name="support-type"
                 value="general"
+                required
               />
               <label for="general">General Enquiry</label>
             </div>
@@ -66,6 +80,7 @@
                 id="support"
                 name="support-type"
                 value="support"
+                required
               />
               <label for="support">Support Request</label><br />
             </div>
@@ -74,11 +89,14 @@
         </div>
         <div class="form__field">
           <label class="label" for="message">Message </label><br />
-          <input
+          <textarea
             class="form__field__message__input"
             id="message"
             name="message"
-          />
+            rows="3"
+            maxlength="300"
+            required
+          ></textarea>
           <span class="form__error">This field is required</span>
         </div>
         <div class="form__field form__field__contact">
@@ -87,6 +105,7 @@
             type="checkbox"
             id="contact"
             name="contact"
+            required
           />
           <label class="label" for="contact"
             >I consent to being contacted by the team</label

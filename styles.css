@@ -67,6 +67,8 @@ input {
   opacity: 0.8;
   cursor: pointer;
   outline: none;
+  font-size: 16px;
+  color: var(--Grey-900-darker);
 }
 
 input:focus {
@@ -88,12 +90,14 @@ input:focus {
   width: 100%;
   height: 55%;
   margin-top: 3%;
+  padding-left: 8%;
 }
 
 .form__input__email {
   width: 100%;
   height: 41px;
   margin-top: 2%;
+  padding-left: 4%;
 }
 
 .form__field__query {
@@ -127,6 +131,20 @@ input:focus {
   width: 100%;
   height: 100px;
   margin-top: 2%;
+}
+
+
+textarea {
+  border-radius: 5px;
+  border: 1px solid;
+  color: var(--Grey-500-medium);
+  opacity: 0.8;
+  outline: none;
+  padding: 3%;
+  padding-left: 4%;
+  font-size: 16px;
+  min-height: 100px;
+  max-height: 110px;
 }
 
 .form__input__contact {
