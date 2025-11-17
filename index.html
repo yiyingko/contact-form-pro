@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form class="form">
+    <form id="contactForm" class="form">
       <div class="form__wrapper">
         <h1>Contact Us</h1>
         <div class="form__field form__field__name">
@@ -30,11 +30,10 @@
               id="fname"
               name="fname"
               maxlength="25"
-              pattern="[A-Za-z0-9\s'-]{1,35}"
-              title="Use up to 35 letters/numbers, spaces, - and ' only."
-              required
+              pattern="^[A-Z][A-Za-z\-]{0,24}$"
+              title="Start with a capital. Up to 25 letters and hyphens."
             />
-            <span class="form__error">This field is required</span>
+            <p class="form__error">This field is required.Enter valid input.</p>
           </div>
           <div class="form__field__name__wraper">
             <label class="label" for="lname">Last name </label><br />
@@ -44,9 +43,10 @@
               id="lname"
               name="lname"
               maxlength="25"
-              required
+              pattern="^[A-Z][A-Za-z\-\s]{0,24}$"
+              title="Start with a capital. Up to 25 letters,space and hyphens."
             />
-            <span class="form__error">This field is required</span>
+            <p class="form__error">This field is required.Enter valid input.</p>
           </div>
         </div>
         <div class="form__field form__field_email">
@@ -57,36 +57,28 @@
             id="email"
             name="email"
             maxlength="50"
-            required
-          /><br />
-          <span class="form__error">Please enter a valid email address</span>
+            pattern="^([a-z\d\.\-]+)@([a-z\d\-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$"
+            title="youremailname @ domain.com(.uk)"
+          />
+          <p class="form__error">Please enter a valid email address</p>
         </div>
-        <div class="form__field">
-          <label class="label" for="query">Query Type </label><br />
+        <div class="form__field" id="queryField">
+          <label class="label">Query Type</label><br />
+
           <div class="form__field__query">
             <div class="form__field__query__wraper">
-              <input
-                type="radio"
-                id="general"
-                name="support-type"
-                value="general"
-                required
-              />
-              <label for="general">General Enquiry</label>
+              <input type="radio" name="support-type" value="general" />
+              <label>General Enquiry</label>
             </div>
             <div class="form__field__query__wraper">
-              <input
-                type="radio"
-                id="support"
-                name="support-type"
-                value="support"
-                required
-              />
-              <label for="support">Support Request</label><br />
+              <input type="radio" name="support-type" value="support" />
+              <label>Support Request</label>
             </div>
           </div>
-          <span class="form__error">Please select a query type</span>
+
+          <p class="form__error">Please select a query type</p>
         </div>
+
         <div class="form__field">
           <label class="label" for="message">Message </label><br />
           <textarea
@@ -95,9 +87,8 @@
             name="message"
             rows="3"
             maxlength="300"
-            required
           ></textarea>
-          <span class="form__error">This field is required</span>
+          <p class="form__error">This field is required</p>
         </div>
         <div class="form__field form__field__contact">
           <input
@@ -110,9 +101,9 @@
           <label class="label" for="contact"
             >I consent to being contacted by the team</label
           >
-          <div class="form__error">
+          <p class="form__error">
             To submit this form, please consent to being contacted
-          </div>
+          </p>
         </div>
         <input
           class="form__field form__field__submit"
@@ -128,15 +119,8 @@
         <img src="assets/images/icon-success-check.svg" alt="check-sign" />
         <h2>Message Sent!</h2>
       </div>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
+      <div>Thanks for completing the form. We'll be in touch soon!</div>
     </div>
-
-    <!-- Contact Us First Name This field is required Last Name This field is
-    required Email Address Please enter a valid email address This field is
-    required Query Type General Enquiry Support Request Please select a query
-    type Message This field is required I consent to being contacted by the team
-    To submit this form, please consent to being contacted Submit Message Sent!
-    Thanks for completing the form. We'll be in touch soon! -->
 
     <div class="attribution">
       Challenge by

@@ -25,12 +25,10 @@ body {
   background-color: var(--Green-200-lighter);
 }
 
-/* .form, .form__field, .form__label, .form__input, .form__error, modifiers like .form__input--invalid*/
-
 .form {
-  width: 630px;
-  height: 650px;
-  margin-top: 8%;
+  width: 640px;
+  min-height: 665px;
+  margin-top: 6%;
   border-radius: 1rem;
   display: grid;
   place-items: center;
@@ -38,12 +36,12 @@ body {
 }
 
 .form__wrapper {
-  width: 90%;
-  height: 90%;
+  width: 88%;
+  height: 87%;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 25px;
   font-weight: 600;
   color: var(--Grey-900-darker);
 }
@@ -57,7 +55,7 @@ h1 {
 .form__field {
   width: 100%;
   height: max-content;
-  margin-top: 2%;
+  margin-top: 2.5%;
 }
 
 input {
@@ -96,7 +94,7 @@ input:focus {
 .form__input__email {
   width: 100%;
   height: 41px;
-  margin-top: 2%;
+  margin-top: 1%;
   padding-left: 4%;
 }
 
@@ -133,7 +131,6 @@ input:focus {
   margin-top: 2%;
 }
 
-
 textarea {
   border-radius: 5px;
   border: 1px solid;
@@ -148,8 +145,8 @@ textarea {
 }
 
 .form__input__contact {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .form__field__contact label {
@@ -158,19 +155,43 @@ textarea {
 }
 
 .form__field__submit {
-  height: 46px;
+  height: 45px;
   background-color: var(--Green-600-medium);
   color: var(--White);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }
 
-.form__error {
+p {
+  max-height: 0;
   color: var(--Red);
-  font-size: 14px;
-  padding-bottom: 10px;
-  display: none;
+  font-size: 12px;
+  opacity: 0;
+}
+
+
+input.invalid {
+  border-color: var(--Red);
+}
+
+input.invalid~p {
+  opacity: 1;
+  max-height: 30px;
+}
+
+textarea.invalid {
+  border-color: var(--Red);
+}
+
+textarea.invalid~p {
+  opacity: 1;
+  max-height: 20px;
+}
+
+.form__field.invalid p {
+  opacity: 1;
+  max-height: 20px;
 }
 
 .form--success {
@@ -186,6 +207,11 @@ textarea {
   inset-inline-start: 40%;
   inset-block-start: 7%;
   transform: rotateY(90deg);
+  transition: transform 0.6s ease;
+}
+
+.form--success.show {
+  transform: rotateY(0deg);
 }
 
 .form--sucess--msg {
