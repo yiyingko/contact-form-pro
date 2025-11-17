@@ -170,12 +170,11 @@ p {
   opacity: 0;
 }
 
-
 input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid~p {
+input.invalid ~ p {
   opacity: 1;
   max-height: 30px;
 }
@@ -184,7 +183,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid~p {
+textarea.invalid ~ p {
   opacity: 1;
   max-height: 20px;
 }
