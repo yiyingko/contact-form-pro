@@ -4,13 +4,17 @@ const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
 const successDiv = document.querySelector('.form--success');
 
-//validation for name and emails
+//validation for name and emails and aria-invaid
 form.querySelectorAll('input, textarea').forEach((field) => {
   field.addEventListener('input', () => {
-    if (field.checkValidity()) {
-      field.classList.remove('invalid');
-    } else {
-      field.classList.add('invalid');
+    const error = document.getElementById(field.id + '-error');
+    const isValid = field.checkValidity();
+
+    field.classList.toggle('invalid', !isValid);
+    field.setAttribute('aria-invalid', isValid ? 'false' : 'true');
+
+    if (error) {
+      error.setAttribute('aria-hidden', isValid ? 'true' : 'false');
     }
   });
 });

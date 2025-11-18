@@ -32,8 +32,17 @@
               maxlength="25"
               pattern="^[A-Z][A-Za-z\-]{0,24}$"
               title="Start with a capital. Up to 25 letters and hyphens."
+              aria-invalid="false"
+              aria-describedby="fname-error"
             />
-            <p class="form__error">This field is required.Enter valid input.</p>
+            <p
+              id="fname-error"
+              class="form__error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              This field is required.Enter valid input.
+            </p>
           </div>
           <div class="form__field__name__wraper">
             <label class="label" for="lname">Last name </label><br />
@@ -45,8 +54,17 @@
               maxlength="25"
               pattern="^[A-Z][A-Za-z\-\s]{0,24}$"
               title="Start with a capital. Up to 25 letters,space and hyphens."
+              aria-describedby="lname-error"
+              aria-invalid="false"
             />
-            <p class="form__error">This field is required.Enter valid input.</p>
+            <p
+              id="lname-error"
+              class="form__error"
+              aria-live="polite"
+              aria-hidden="true"
+            >
+              This field is required.Enter valid input.
+            </p>
           </div>
         </div>
         <div class="form__field form__field_email">
@@ -59,8 +77,17 @@
             maxlength="50"
             pattern="^([a-z\d\.\-]+)@([a-z\d\-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$"
             title="youremailname @ domain.com(.uk)"
+            aria-invalid="false"
+            aria-describedby="email-error"
           />
-          <p class="form__error">Please enter a valid email address</p>
+          <p
+            id="email-error"
+            class="form__error"
+            aria-live="polite"
+            aria-hidden="true"
+          >
+            Please enter a valid email address
+          </p>
         </div>
         <div class="form__field" id="queryField">
           <label class="label">Query Type</label><br />
