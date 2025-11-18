@@ -32,7 +32,7 @@ body {
   border-radius: 1rem;
   display: grid;
   place-items: center;
-  background-color: var(--White)
+  background-color: var(--White);
 }
 
 .form__wrapper {
@@ -60,13 +60,15 @@ h1 {
 
 input {
   border-radius: 5px;
-  border: 1px solid;
+  border: 1px solid var(--Grey-500-medium);
   opacity: 0.8;
   cursor: pointer;
   outline: none;
   font-size: 16px;
   color: var(--Grey-900-darker);
 }
+
+
 
 input:focus {
   border: 1.8px solid var(--Green-600-medium);
@@ -132,8 +134,8 @@ input:focus {
 
 textarea {
   border-radius: 5px;
-  border: 1px solid;
-  color: var(--Grey-500-medium);
+  border: 1px solid var(--Grey-500-medium);
+  color: var(--Grey-900-darker);
   opacity: 0.8;
   outline: none;
   padding: 3%;
