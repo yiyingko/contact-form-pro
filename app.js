@@ -2,7 +2,6 @@ const form = document.getElementById('contactForm');
 const textarea = document.querySelector('textarea');
 const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
-const isChecked = [...radios].some((r) => r.checked);
 const successDiv = document.querySelector('.form--success');
 
 //validation for name and emails
@@ -34,6 +33,8 @@ radios.forEach((radio) => {
 
 //submition & check radio
 form.addEventListener('submit', (e) => {
+  const isChecked = [...radios].some((r) => r.checked);
+
   if (!isChecked) {
     e.preventDefault();
     radioField.classList.add('invalid');

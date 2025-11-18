@@ -32,7 +32,7 @@ body {
   border-radius: 1rem;
   display: grid;
   place-items: center;
-  background-color: var(--White);
+  background-color: var(--White)
 }
 
 .form__wrapper {
@@ -61,7 +61,6 @@ h1 {
 input {
   border-radius: 5px;
   border: 1px solid;
-  color: var(--Grey-500-medium);
   opacity: 0.8;
   cursor: pointer;
   outline: none;
@@ -174,7 +173,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid ~ p {
+input.invalid~p {
   opacity: 1;
   max-height: 30px;
 }
@@ -183,7 +182,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid ~ p {
+textarea.invalid~p {
   opacity: 1;
   max-height: 20px;
 }
@@ -206,11 +205,11 @@ textarea.invalid ~ p {
   inset-inline-start: 40%;
   inset-block-start: 7%;
   transform: rotateY(90deg);
-  transition: transform 0.6s ease;
 }
 
 .form--success.show {
   transform: rotateY(0deg);
+  transition: transform 0.6s ease;
 }
 
 .form--sucess--msg {
