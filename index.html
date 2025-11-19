@@ -35,12 +35,7 @@
               aria-invalid="false"
               aria-describedby="fname-error"
             />
-            <p
-              id="fname-error"
-              class="form__error"
-              aria-live="polite"
-              aria-hidden="true"
-            >
+            <p id="fname-error" class="form__error" aria-live="polite" hidden>
               This field is required.Enter valid input.
             </p>
           </div>
@@ -57,12 +52,7 @@
               aria-describedby="lname-error"
               aria-invalid="false"
             />
-            <p
-              id="lname-error"
-              class="form__error"
-              aria-live="polite"
-              aria-hidden="true"
-            >
+            <p id="lname-error" class="form__error" aria-live="polite" hidden>
               This field is required.Enter valid input.
             </p>
           </div>
@@ -80,12 +70,7 @@
             aria-invalid="false"
             aria-describedby="email-error"
           />
-          <p
-            id="email-error"
-            class="form__error"
-            aria-live="polite"
-            aria-hidden="true"
-          >
+          <p id="email-error" class="form__error" aria-live="polite" hidden>
             Please enter a valid email address
           </p>
         </div>
@@ -114,8 +99,12 @@
             name="message"
             rows="3"
             maxlength="300"
+            aria-describedby="message-error"
+            aria-invalid="false"
           ></textarea>
-          <p class="form__error">This field is required</p>
+          <p id="message-error" class="form__error" aria-live="polite" hidden>
+            This field is required
+          </p>
         </div>
         <div class="form__field form__field__contact">
           <input

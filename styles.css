@@ -68,8 +68,6 @@ input {
   color: var(--Grey-900-darker);
 }
 
-
-
 input:focus {
   border: 1.8px solid var(--Green-600-medium);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -175,7 +173,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid~p {
+input.invalid ~ p {
   opacity: 1;
   max-height: 30px;
 }
@@ -184,7 +182,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid~p {
+textarea.invalid ~ p {
   opacity: 1;
   max-height: 20px;
 }

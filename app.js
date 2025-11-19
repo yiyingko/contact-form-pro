@@ -14,17 +14,23 @@ form.querySelectorAll('input, textarea').forEach((field) => {
     field.setAttribute('aria-invalid', isValid ? 'false' : 'true');
 
     if (error) {
-      error.setAttribute('aria-hidden', isValid ? 'true' : 'false');
+      error.hidden = isValid;
     }
   });
 });
 
 //check message textarea
 textarea.addEventListener('focusout', () => {
+  const error = document.getElementById('message-error');
+
   if (textarea.value.trim() === '') {
     textarea.classList.add('invalid');
+    textarea.setAttribute('aria-invalid', 'true');
+    error.hidden = false;
   } else {
     textarea.classList.remove('invalid');
+    textarea.setAttribute('aria-invalid', 'false');
+    error.hidden = true;
   }
 });
 
