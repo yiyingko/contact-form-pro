@@ -3,24 +3,36 @@ const textarea = document.querySelector('textarea');
 const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
 const successDiv = document.querySelector('.form--success');
+const radioGroup = document.getElementById('query-radiogroup');
+const radioError = document.getElementById('query-error');
 
-//validation for name and emails
+//validation for name and emails and aria-invaid
 form.querySelectorAll('input, textarea').forEach((field) => {
   field.addEventListener('input', () => {
-    if (field.checkValidity()) {
-      field.classList.remove('invalid');
-    } else {
-      field.classList.add('invalid');
+    const error = document.getElementById(field.id + '-error');
+    const isValid = field.checkValidity();
+
+    field.classList.toggle('invalid', !isValid);
+    field.setAttribute('aria-invalid', isValid ? 'false' : 'true');
+
+    if (error) {
+      error.hidden = isValid;
     }
   });
 });
 
 //check message textarea
 textarea.addEventListener('focusout', () => {
+  const error = document.getElementById('message-error');
+
   if (textarea.value.trim() === '') {
     textarea.classList.add('invalid');
+    textarea.setAttribute('aria-invalid', 'true');
+    error.hidden = false;
   } else {
     textarea.classList.remove('invalid');
+    textarea.setAttribute('aria-invalid', 'false');
+    error.hidden = true;
   }
 });
 
@@ -28,6 +40,8 @@ textarea.addEventListener('focusout', () => {
 radios.forEach((radio) => {
   radio.addEventListener('change', () => {
     radioField.classList.remove('invalid');
+    radioGroup.setAttribute('aria-invalid', 'false');
+    radioError.hidden = true;
   });
 });
 
@@ -38,9 +52,14 @@ form.addEventListener('submit', (e) => {
   if (!isChecked) {
     e.preventDefault();
     radioField.classList.add('invalid');
+    radioGroup.setAttribute('aria-invalid', 'true');
+    radioError.hidden = false;
+
     return;
   } else {
     radioField.classList.remove('invalid');
+    radioGroup.setAttribute('aria-invalid', 'false');
+    radioError.hidden = true;
   }
 
   // Check entire form validity
@@ -51,11 +70,12 @@ form.addEventListener('submit', (e) => {
 
   // form is valid
   e.preventDefault(); // Prevent real submit
-  successDiv.classList.add('show');
+  successDiv.hidden = false;
+  successDiv.focus();
   clearInputs();
   //remove sucess div after 5 seconds
   setTimeout(() => {
-    successDiv.classList.remove('show');
+    successDiv.hidden = true;
   }, 5000);
 });
 

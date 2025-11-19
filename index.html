@@ -32,8 +32,13 @@
               maxlength="25"
               pattern="^[A-Z][A-Za-z\-]{0,24}$"
               title="Start with a capital. Up to 25 letters and hyphens."
+              aria-invalid="false"
+              aria-describedby="fname-error"
+              required
             />
-            <p class="form__error">This field is required.Enter valid input.</p>
+            <p id="fname-error" class="form__error" aria-live="polite" hidden>
+              This field is required.Enter valid input.
+            </p>
           </div>
           <div class="form__field__name__wraper">
             <label class="label" for="lname">Last name </label><br />
@@ -45,8 +50,13 @@
               maxlength="25"
               pattern="^[A-Z][A-Za-z\-\s]{0,24}$"
               title="Start with a capital. Up to 25 letters,space and hyphens."
+              aria-describedby="lname-error"
+              aria-invalid="false"
+              required
             />
-            <p class="form__error">This field is required.Enter valid input.</p>
+            <p id="lname-error" class="form__error" aria-live="polite" hidden>
+              This field is required.Enter valid input.
+            </p>
           </div>
         </div>
         <div class="form__field form__field_email">
@@ -59,24 +69,38 @@
             maxlength="50"
             pattern="^([a-z\d\.\-]+)@([a-z\d\-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$"
             title="youremailname @ domain.com(.uk)"
+            aria-invalid="false"
+            aria-describedby="email-error"
+            required
           />
-          <p class="form__error">Please enter a valid email address</p>
+          <p id="email-error" class="form__error" aria-live="polite" hidden>
+            Please enter a valid email address
+          </p>
         </div>
         <div class="form__field" id="queryField">
-          <label class="label">Query Type</label><br />
+          <label class="label" id="query-label">Query Type</label><br />
 
-          <div class="form__field__query">
+          <div
+            class="form__field__query"
+            id="query-radiogroup"
+            role="radiogroup"
+            aria-labelledby="query-label"
+            aria-describedby="query-error"
+            aria-invalid="false"
+          >
             <div class="form__field__query__wraper">
               <input type="radio" name="support-type" value="general" />
-              <label>General Enquiry</label>
+              <label for="support-general">General Enquiry</label>
             </div>
             <div class="form__field__query__wraper">
               <input type="radio" name="support-type" value="support" />
-              <label>Support Request</label>
+              <label for="support-support">Support Request</label>
             </div>
           </div>
 
-          <p class="form__error">Please select a query type</p>
+          <p id="query-error" class="form__error" hidden aria-live="polite">
+            Please select a query type
+          </p>
         </div>
 
         <div class="form__field">
@@ -87,8 +111,12 @@
             name="message"
             rows="3"
             maxlength="300"
+            aria-describedby="message-error"
+            aria-invalid="false"
           ></textarea>
-          <p class="form__error">This field is required</p>
+          <p id="message-error" class="form__error" aria-live="polite" hidden>
+            This field is required
+          </p>
         </div>
         <div class="form__field form__field__contact">
           <input
@@ -97,11 +125,13 @@
             id="contact"
             name="contact"
             required
+            aria-describedby="contact-error"
+            aria-invalid="false"
           />
           <label class="label" for="contact"
             >I consent to being contacted by the team</label
           >
-          <p class="form__error">
+          <p id="contact-error" class="form__error" hidden aria-live="polite">
             To submit this form, please consent to being contacted
           </p>
         </div>
@@ -114,7 +144,7 @@
         />
       </div>
     </form>
-    <div class="form--success">
+    <div class="form--success" id="success" role="status" hidden>
       <div class="form--sucess--msg">
         <img src="assets/images/icon-success-check.svg" alt="check-sign" />
         <h2>Message Sent!</h2>
