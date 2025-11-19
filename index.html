@@ -34,6 +34,7 @@
               title="Start with a capital. Up to 25 letters and hyphens."
               aria-invalid="false"
               aria-describedby="fname-error"
+              required
             />
             <p id="fname-error" class="form__error" aria-live="polite" hidden>
               This field is required.Enter valid input.
@@ -51,6 +52,7 @@
               title="Start with a capital. Up to 25 letters,space and hyphens."
               aria-describedby="lname-error"
               aria-invalid="false"
+              required
             />
             <p id="lname-error" class="form__error" aria-live="polite" hidden>
               This field is required.Enter valid input.
@@ -69,6 +71,7 @@
             title="youremailname @ domain.com(.uk)"
             aria-invalid="false"
             aria-describedby="email-error"
+            required
           />
           <p id="email-error" class="form__error" aria-live="polite" hidden>
             Please enter a valid email address
@@ -141,7 +144,7 @@
         />
       </div>
     </form>
-    <div class="form--success">
+    <div class="form--success" id="success" role="status" hidden>
       <div class="form--sucess--msg">
         <img src="assets/images/icon-success-check.svg" alt="check-sign" />
         <h2>Message Sent!</h2>

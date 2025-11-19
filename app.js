@@ -70,11 +70,12 @@ form.addEventListener('submit', (e) => {
 
   // form is valid
   e.preventDefault(); // Prevent real submit
-  successDiv.classList.add('show');
+  successDiv.hidden = false;
+  successDiv.focus();
   clearInputs();
   //remove sucess div after 5 seconds
   setTimeout(() => {
-    successDiv.classList.remove('show');
+    successDiv.hidden = true;
   }, 5000);
 });
 

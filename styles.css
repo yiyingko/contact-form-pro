@@ -173,7 +173,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid ~ p {
+input.invalid~p {
   opacity: 1;
   max-height: 30px;
 }
@@ -182,7 +182,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid ~ p {
+textarea.invalid~p {
   opacity: 1;
   max-height: 20px;
 }
@@ -204,12 +204,6 @@ textarea.invalid ~ p {
   position: absolute;
   inset-inline-start: 40%;
   inset-block-start: 7%;
-  transform: rotateY(90deg);
-}
-
-.form--success.show {
-  transform: rotateY(0deg);
-  transition: transform 0.6s ease;
 }
 
 .form--sucess--msg {
