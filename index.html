@@ -77,7 +77,14 @@
         <div class="form__field" id="queryField">
           <label class="label">Query Type</label><br />
 
-          <div class="form__field__query">
+          <div
+            class="form__field__query"
+            id="query-radiogroup"
+            role="radiogroup"
+            aria-labelledby="query-label"
+            aria-describedby="query-error"
+            aria-invalid="false"
+          >
             <div class="form__field__query__wraper">
               <input type="radio" name="support-type" value="general" />
               <label>General Enquiry</label>
@@ -88,7 +95,9 @@
             </div>
           </div>
 
-          <p class="form__error">Please select a query type</p>
+          <p id="query-error" class="form__error" hidden aria-live="polite">
+            Please select a query type
+          </p>
         </div>
 
         <div class="form__field">
@@ -113,11 +122,13 @@
             id="contact"
             name="contact"
             required
+            aria-describedby="contact-error"
+            aria-invalid="false"
           />
           <label class="label" for="contact"
             >I consent to being contacted by the team</label
           >
-          <p class="form__error">
+          <p id="contact-error" class="form__error" hidden aria-live="polite">
             To submit this form, please consent to being contacted
           </p>
         </div>

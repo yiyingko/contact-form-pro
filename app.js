@@ -3,6 +3,8 @@ const textarea = document.querySelector('textarea');
 const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
 const successDiv = document.querySelector('.form--success');
+const radioGroup = document.getElementById('query-radiogroup');
+const radioError = document.getElementById('query-error');
 
 //validation for name and emails and aria-invaid
 form.querySelectorAll('input, textarea').forEach((field) => {
@@ -38,6 +40,8 @@ textarea.addEventListener('focusout', () => {
 radios.forEach((radio) => {
   radio.addEventListener('change', () => {
     radioField.classList.remove('invalid');
+    radioGroup.setAttribute('aria-invalid', 'false');
+    radioError.hidden = true;
   });
 });
 
@@ -48,9 +52,14 @@ form.addEventListener('submit', (e) => {
   if (!isChecked) {
     e.preventDefault();
     radioField.classList.add('invalid');
+    radioGroup.setAttribute('aria-invalid', 'true');
+    radioError.hidden = false;
+
     return;
   } else {
     radioField.classList.remove('invalid');
+    radioGroup.setAttribute('aria-invalid', 'false');
+    radioError.hidden = true;
   }
 
   // Check entire form validity
