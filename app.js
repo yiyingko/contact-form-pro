@@ -2,7 +2,7 @@ const form = document.getElementById('contactForm');
 const textarea = document.querySelector('textarea');
 const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
-const successDiv = document.querySelector('.form--success');
+const successDiv = document.querySelector('.form__success');
 const radioGroup = document.getElementById('query-radiogroup');
 const radioError = document.getElementById('query-error');
 
@@ -45,8 +45,9 @@ radios.forEach((radio) => {
   });
 });
 
-//submition & check radio
+//submition & check radio, textarea
 form.addEventListener('submit', (e) => {
+  const messageError = document.getElementById('message-error');
   const isChecked = [...radios].some((r) => r.checked);
 
   if (!isChecked) {
@@ -60,6 +61,19 @@ form.addEventListener('submit', (e) => {
     radioField.classList.remove('invalid');
     radioGroup.setAttribute('aria-invalid', 'false');
     radioError.hidden = true;
+  }
+
+  if (textarea.value.trim() === '') {
+    e.preventDefault();
+    textarea.classList.add('invalid');
+    textarea.setAttribute('aria-invalid', 'true');
+    messageError.hidden = false;
+    textarea.focus();
+    return;
+  } else {
+    textarea.classList.remove('invalid');
+    textarea.setAttribute('aria-invalid', 'false');
+    messageError.hidden = true;
   }
 
   // Check entire form validity
