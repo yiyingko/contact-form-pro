@@ -58,20 +58,32 @@ h1 {
   margin-top: 2.5%;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 input {
   border-radius: 5px;
   border: 1px solid var(--Grey-500-medium);
   opacity: 0.8;
   cursor: pointer;
-  outline: none;
   font-size: 16px;
   color: var(--Grey-900-darker);
 }
 
-input:focus {
+input:focus-visible,
+textarea:focus-visible {
   border: 1.8px solid var(--Green-600-medium);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+
+.form input[type="checkbox"]:focus-visible {
+  box-shadow: var(--Green-600-medium) 0 0 0 0.8pt;
+
+}
+
 
 .form__field__name {
   height: 13%;
@@ -112,12 +124,14 @@ input:focus {
   caret-color: transparent;
 }
 
+
 .form__field__query__wraper:hover {
   cursor: pointer;
 }
 
 .form__field__query__wraper:focus-within {
   background-color: var(--Green-200-lighter);
+  border: 1.8px solid var(--Green-600-medium);
 }
 
 .form__field__query input {
@@ -143,6 +157,7 @@ textarea {
   max-height: 110px;
 }
 
+
 .form__input__contact {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -160,6 +175,10 @@ textarea {
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--Grey-900-darker);
 }
 
 p {
