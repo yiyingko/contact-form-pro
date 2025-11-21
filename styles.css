@@ -67,10 +67,10 @@ input {
   border-radius: 5px;
   border: 1px solid var(--Grey-500-medium);
   opacity: 0.8;
-  cursor: pointer;
   font-size: 16px;
   color: var(--Grey-900-darker);
 }
+
 
 input:focus-visible,
 textarea:focus-visible {
@@ -172,8 +172,8 @@ textarea {
   cursor: pointer;
 }
 
-button:focus-visible {
-  outline: 3px solid var(--Grey-900-darker);
+input[type='submit']:focus-visible {
+  outline: 1.8px solid var(--Grey-900-darker);
 }
 
 p {
@@ -187,7 +187,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid ~ p {
+input.invalid~p {
   opacity: 1;
   max-height: 30px;
 }
@@ -196,7 +196,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid ~ p {
+textarea.invalid~p {
   opacity: 1;
   max-height: 20px;
 }
@@ -229,6 +229,7 @@ h2 {
   font-size: 14px;
   margin-left: 2%;
 }
+
 
 /*footer*/
 .attribution {
