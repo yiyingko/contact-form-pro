@@ -2,7 +2,7 @@ const form = document.getElementById('contactForm');
 const textarea = document.querySelector('textarea');
 const radios = form.querySelectorAll('input[name="support-type"]');
 const radioField = document.getElementById('queryField');
-const successDiv = document.querySelector('.form--success');
+const successDiv = document.querySelector('.form__success');
 const radioGroup = document.getElementById('query-radiogroup');
 const radioError = document.getElementById('query-error');
 

@@ -40,13 +40,13 @@ body {
   height: 87%;
 }
 
-h1 {
+.form__title {
   font-size: 25px;
   font-weight: 600;
   color: var(--Grey-900-darker);
 }
 
-.label::after {
+.form__label::after {
   content: '*';
   color: var(--Green-600-medium);
   font-size: small;
@@ -81,37 +81,37 @@ textarea:focus-visible {
   box-shadow: var(--Green-600-medium) 0 0 0 0.8pt;
 }
 
-.form__field__name {
+.form__field--name {
   height: 13%;
   display: flex;
   justify-content: space-between;
 }
 
-.form__field__name__wraper {
+.form__field-wrapper {
   width: 49%;
 }
 
-.form__input__name {
+.form__input--name {
   width: 100%;
   height: 55%;
   margin-top: 3%;
   padding-left: 8%;
 }
 
-.form__input__email {
+.form__input--email {
   width: 100%;
   height: 41px;
   margin-top: 1%;
   padding-left: 4%;
 }
 
-.form__field__query {
+.form__query {
   height: 58px;
   display: flex;
   justify-content: space-between;
 }
 
-.form__field__query__wraper {
+.form__query-option {
   width: 49%;
   margin-top: 2%;
   border: 1px solid var(--Grey-500-medium);
@@ -120,20 +120,20 @@ textarea:focus-visible {
   caret-color: transparent;
 }
 
-.form__field__query__wraper:hover {
+.form__query-option:hover {
   cursor: pointer;
 }
 
-.form__field__query__wraper:focus-within {
+.form__query-option:focus-within {
   background-color: var(--Green-200-lighter);
   border: 1.8px solid var(--Green-600-medium);
 }
 
-.form__field__query input {
+.form__query input {
   margin-top: 15px;
 }
 
-.form__field__message__input {
+.form__input--message {
   width: 100%;
   height: 100px;
   margin-top: 2%;
@@ -152,17 +152,17 @@ textarea {
   max-height: 110px;
 }
 
-.form__input__contact {
+.form__input--contact {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.form__field__contact label {
+.form__field--contact .form__label {
   margin-left: 2%;
   font-size: 14px;
 }
 
-.form__field__submit {
+.form__field--submit {
   height: 45px;
   background-color: var(--Green-600-medium);
   color: var(--White);
@@ -175,7 +175,7 @@ input[type='submit']:focus-visible {
   outline: 1.8px solid var(--Grey-900-darker);
 }
 
-p {
+.form__error {
   max-height: 0;
   color: var(--Red);
   font-size: 12px;
@@ -186,7 +186,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid ~ p {
+input.invalid~.form__error {
   opacity: 1;
   max-height: 30px;
 }
@@ -195,17 +195,17 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid ~ p {
+textarea.invalid~.form__error {
   opacity: 1;
   max-height: 20px;
 }
 
-.form__field.invalid p {
+.form__field.invalid .form__error {
   opacity: 1;
   max-height: 20px;
 }
 
-.form--success {
+.form__success {
   width: 19.5%;
   height: 5.2rem;
   border-radius: 0.5rem;
@@ -219,12 +219,12 @@ textarea.invalid ~ p {
   inset-block-start: 7%;
 }
 
-.form--sucess--msg {
+.form__success-msg {
   display: flex;
   margin-bottom: 3%;
 }
 
-h2 {
+.form__success-title {
   font-size: 14px;
   margin-left: 2%;
 }
