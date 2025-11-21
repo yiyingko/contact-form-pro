@@ -89,11 +89,21 @@
             aria-invalid="false"
           >
             <div class="form__field__query__wraper">
-              <input type="radio" name="support-type" value="general" />
+              <input
+                id="support-general"
+                type="radio"
+                name="support-type"
+                value="general"
+              />
               <label for="support-general">General Enquiry</label>
             </div>
             <div class="form__field__query__wraper">
-              <input type="radio" name="support-type" value="support" />
+              <input
+                id="support-support"
+                type="radio"
+                name="support-type"
+                value="support"
+              />
               <label for="support-support">Support Request</label>
             </div>
           </div>
@@ -113,6 +123,7 @@
             maxlength="300"
             aria-describedby="message-error"
             aria-invalid="false"
+            required
           ></textarea>
           <p id="message-error" class="form__error" aria-live="polite" hidden>
             This field is required
@@ -146,7 +157,7 @@
     </form>
     <div class="form--success" id="success" role="status" tabindex="-1" hidden>
       <div class="form--sucess--msg">
-        <img src="assets/images/icon-success-check.svg" alt="check-sign" />
+        <img src="assets/images/icon-success-check.svg" alt="" />
         <h2>Message Sent!</h2>
       </div>
       <div>Thanks for completing the form. We'll be in touch soon!</div>

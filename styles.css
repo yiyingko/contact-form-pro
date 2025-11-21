@@ -78,12 +78,9 @@ textarea:focus-visible {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-
-.form input[type="checkbox"]:focus-visible {
+.form input[type='checkbox']:focus-visible {
   box-shadow: var(--Green-600-medium) 0 0 0 0.8pt;
-
 }
-
 
 .form__field__name {
   height: 13%;
@@ -124,7 +121,6 @@ textarea:focus-visible {
   caret-color: transparent;
 }
 
-
 .form__field__query__wraper:hover {
   cursor: pointer;
 }
@@ -156,7 +152,6 @@ textarea {
   min-height: 100px;
   max-height: 110px;
 }
-
 
 .form__input__contact {
   margin-top: 10px;
@@ -192,7 +187,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid~p {
+input.invalid ~ p {
   opacity: 1;
   max-height: 30px;
 }
@@ -201,7 +196,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid~p {
+textarea.invalid ~ p {
   opacity: 1;
   max-height: 20px;
 }
