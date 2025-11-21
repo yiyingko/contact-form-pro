@@ -71,7 +71,6 @@ input {
   color: var(--Grey-900-darker);
 }
 
-
 input:focus-visible,
 textarea:focus-visible {
   border: 1.8px solid var(--Green-600-medium);
@@ -187,7 +186,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid~p {
+input.invalid ~ p {
   opacity: 1;
   max-height: 30px;
 }
@@ -196,7 +195,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid~p {
+textarea.invalid ~ p {
   opacity: 1;
   max-height: 20px;
 }
@@ -229,7 +228,6 @@ h2 {
   font-size: 14px;
   margin-left: 2%;
 }
-
 
 /*footer*/
 .attribution {
