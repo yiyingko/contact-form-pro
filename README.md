@@ -110,33 +110,37 @@ If either step fails, the commit is paused until issues are fixed — keeping th
 
 ## ♿ Accessibility Notes
 
-- Each input has a label (`for`/`id`) or `aria-label`.
-- Invalid fields use `aria-invalid="true"` and link errors with `aria-describedby`.
-- Validation summary announced via `aria-live="polite"`.
-- Tab order matches visual order; focus visible on all interactive elements.
+- All form controls have explicit `<label>` elements connected via `for`/`id` (including the consent checkbox).
+- The “Query Type” radios are grouped in a `role="radiogroup"` with `aria-labelledby` and `aria-describedby` for clear context and error association.
+- Each field is linked to its inline error message via `aria-describedby`.
+- Error messages use `aria-live="polite"` and are toggled with the `hidden` attribute so screen readers announce them when they appear.
+- Validation state is tracked with `aria-invalid` on each control (or radiogroup) to indicate when a field is invalid.
+- The form uses the natural DOM order for fields and submit button, so tab order matches visual order and works with default browser focus behavior.
 
 ---
 
 ## 📸 Screenshots
 
-_Add before/after screenshots or mobile/desktop views here._
+![alt text](<Screenshot from 2025-11-24 22-31-16.png>)
 
 ---
 
 ## 🌐 Live Demo
 
-➡️ [View on GitHub Pages](https://your-username.github.io/contact-form-pro/)
+➡️ [View on GitHub Pages](https://yiyingko.github.io/contact-form-pro/)
 
 ---
 
-## 🪞 Reflection
+# 🪞 Reflection
 
-| Date        | Topic  | Notes                                                |
-| :---------- | :----- | :--------------------------------------------------- |
-| 03 Nov 2025 | Setup  | Deployed blank form via GitHub Pages successfully 🎉 |
-| 04 Nov 2025 | ESLint | Configured and learned rules for consistency         |
-| 05 Nov 2025 | A11Y   | First aria-live region implemented                   |
-| 08 Nov 2025 | Review | Feeling more confident using issues and PR flow      |
+| Topic           | Notes                                                                                                                       |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| Setup           | Deployed blank form via GitHub Pages successfully 🎉                                                                        |
+| ESLint          | Configured and learned rules for consistency                                                                                |
+| Prettier        | Added formatting workflow + pre-commit hook to keep code clean                                                              |
+| checkValidity() | Practised using `checkValidity()` to trigger and manage field errors                                                        |
+| A11Y            | Learned correct use of aria-invalid, aria-describedby, aria-live, and replaced visual tricks with fully accessible patterns |
+| Review          | Feeling more confident using issues and PR flow                                                                             |
 
 ---
 
