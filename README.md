@@ -51,7 +51,7 @@ npm run fix      # auto-fix style issues
 ## ⚙️ Setup & Local Run
 
 ```bash
-git clone https://github.com/<yourname>/contact-form-pro.git
+git clone https://github.com/yiyingko/contact-form-pro
 cd contact-form-pro
 npm install
 # open docs/index.html in your browser
@@ -93,7 +93,7 @@ If either step fails, the commit is paused until issues are fixed — keeping th
 
 - Static site hosted via **GitHub Pages**
 - Settings → Pages → Deploy from `/docs` folder
-- Live URL: ➡️ **[your-username.github.io/contact-form-pro](https://your-username.github.io/contact-form-pro/)**
+- Live URL: ➡️ **[your-username.github.io/contact-form-pro](https://yiyingko.github.io/contact-form-pro/)**
 
 ---
 
