@@ -131,14 +131,16 @@ If either step fails, the commit is paused until issues are fixed — keeping th
 
 ---
 
-## 🪞 Reflection
+# 🪞 Reflection
 
-| Date        | Topic  | Notes                                                |
-| :---------- | :----- | :--------------------------------------------------- |
-| 03 Nov 2025 | Setup  | Deployed blank form via GitHub Pages successfully 🎉 |
-| 04 Nov 2025 | ESLint | Configured and learned rules for consistency         |
-| 05 Nov 2025 | A11Y   | First aria-live region implemented                   |
-| 08 Nov 2025 | Review | Feeling more confident using issues and PR flow      |
+| Topic           | Notes                                                                                                                       |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| Setup           | Deployed blank form via GitHub Pages successfully 🎉                                                                        |
+| ESLint          | Configured and learned rules for consistency                                                                                |
+| Prettier        | Added formatting workflow + pre-commit hook to keep code clean                                                              |
+| checkValidity() | Practised using `checkValidity()` to trigger and manage field errors                                                        |
+| A11Y            | Learned correct use of aria-invalid, aria-describedby, aria-live, and replaced visual tricks with fully accessible patterns |
+| Review          | Feeling more confident using issues and PR flow                                                                             |
 
 ---
 
