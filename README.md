@@ -121,7 +121,7 @@ If either step fails, the commit is paused until issues are fixed — keeping th
 
 ## 📸 Screenshots
 
-_Add before/after screenshots or mobile/desktop views here._
+![alt text](<Screenshot from 2025-11-24 22-31-16.png>)
 
 ---
 

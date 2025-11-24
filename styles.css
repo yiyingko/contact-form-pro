@@ -186,7 +186,7 @@ input.invalid {
   border-color: var(--Red);
 }
 
-input.invalid~.form__error {
+input.invalid ~ .form__error {
   opacity: 1;
   max-height: 30px;
 }
@@ -195,7 +195,7 @@ textarea.invalid {
   border-color: var(--Red);
 }
 
-textarea.invalid~.form__error {
+textarea.invalid ~ .form__error {
   opacity: 1;
   max-height: 20px;
 }
