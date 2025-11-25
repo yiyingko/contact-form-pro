@@ -93,7 +93,7 @@ If either step fails, the commit is paused until issues are fixed — keeping th
 
 - Static site hosted via **GitHub Pages**
 - Settings → Pages → Deploy from `/docs` folder
-- Live URL: ➡️ **[your-username.github.io/contact-form-pro](https://yiyingko.github.io/contact-form-pro/)**
+- Live URL: ➡️ **[yiyingko.github.io/contact-form-pro](https://yiyingko.github.io/contact-form-pro/)**
 
 ---
 
