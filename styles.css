@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 :root {
   /*Primary*/
   --Green-200-lighter: hsl(148, 38%, 91%);
@@ -9,7 +11,6 @@
   --Grey-900-darker: hsl(187, 24%, 22%);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
   margin: 0;
